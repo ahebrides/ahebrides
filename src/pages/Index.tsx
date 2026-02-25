@@ -1,12 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useFadeIn } from "@/hooks/useFadeIn";
+import HeroSection from "@/components/HeroSection";
+import ContradictionSection from "@/components/ContradictionSection";
+import ServicesSection from "@/components/ServicesSection";
+import CaseStudiesSection from "@/components/CaseStudiesSection";
+import StudioSection from "@/components/StudioSection";
+import ContactSection from "@/components/ContactSection";
+import FooterSection from "@/components/FooterSection";
 
 const Index = () => {
+  const containerRef = useFadeIn();
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div ref={containerRef} className="bg-background">
+      <HeroSection />
+      <div className="fade-in-section"><ContradictionSection /></div>
+      <div className="fade-in-section"><ServicesSection /></div>
+      <div className="fade-in-section"><CaseStudiesSection /></div>
+      <div className="fade-in-section"><StudioSection /></div>
+      <div className="fade-in-section"><ContactSection /></div>
+      <FooterSection />
     </div>
   );
 };
