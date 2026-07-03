@@ -28,7 +28,7 @@ const CaseStudiesSection = () => {
             <img src={arttee3} alt="ARTTEESHOW campaign — flat lay" className="w-full aspect-[3/4] object-cover" />
           </div>
 
-          <a href="#" className="text-accent text-sm tracking-widest uppercase hover:text-accent/80 transition-colors">
+          <a href="/case-study/artteeshow" className="text-accent text-sm tracking-widest uppercase hover:text-accent/80 transition-colors">
             Full case study →
           </a>
         </div>

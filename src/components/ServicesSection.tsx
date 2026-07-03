@@ -33,9 +33,9 @@ const ServicesSection = () => {
               <p className="text-muted-foreground font-light leading-relaxed mb-6">
                 {service.description}
               </p>
-              <a href="#contact" className="text-accent text-sm tracking-widest uppercase hover:text-accent/80 transition-colors">
+              <button onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })} className="text-accent text-sm tracking-widest uppercase hover:text-accent/80 transition-colors bg-transparent border-none cursor-pointer p-0">
                 Learn More →
-              </a>
+              </button>
             </div>
           ))}
         </div>

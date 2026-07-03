@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { toast } from "sonner";
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -9,14 +10,47 @@ const ContactSection = () => {
     budget: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent(`New project enquiry from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nProject Type: ${formData.projectType}\nBudget: ${formData.budget}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:laurent@ahebrides.co.uk?subject=${subject}&body=${body}`;
+    setIsSubmitting(true);
+
+    try {
+      const body = new URLSearchParams({
+        "form-name": "contact",
+        name: formData.name,
+        email: formData.email,
+        company: formData.company,
+        projectType: formData.projectType,
+        budget: formData.budget,
+        message: formData.message,
+      });
+
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: body.toString(),
+      });
+
+      if (response.ok) {
+        toast.success("Message sent! We'll be in touch soon.");
+        setFormData({
+          name: "",
+          email: "",
+          company: "",
+          projectType: "",
+          budget: "",
+          message: "",
+        });
+      } else {
+        toast.error("Something went wrong. Please try again.");
+      }
+    } catch {
+      toast.error("Network error. Please check your connection and try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const inputClasses =
@@ -34,54 +68,31 @@ const ContactSection = () => {
           Tell us what you're building. We'll tell you how we can help.
         </p>
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          data-netlify-honeypot="bot-field"
+          onSubmit={handleSubmit}
+          className="space-y-6"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="bot-field" />
+
           <div className="grid md:grid-cols-2 gap-6">
-            <input
-              type="text"
-              placeholder="Name"
-              required
-              className={inputClasses}
-              value={formData.name}
-              onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-            />
-            <input
-              type="email"
-              placeholder="Email"
-              required
-              className={inputClasses}
-              value={formData.email}
-              onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-            />
+            <input type="text" placeholder="Name" required className={inputClasses} value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
+            <input type="email" placeholder="Email" required className={inputClasses} value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
           </div>
-
-          <input
-            type="text"
-            placeholder="Company / Brand"
-            className={inputClasses}
-            value={formData.company}
-            onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-          />
-
+          <input type="text" placeholder="Company / Brand" className={inputClasses} value={formData.company} onChange={(e) => setFormData({ ...formData, company: e.target.value })} />
           <div className="grid md:grid-cols-2 gap-6">
-            <select
-              required
-              className={selectClasses}
-              value={formData.projectType}
-              onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-            >
+            <select required className={selectClasses} value={formData.projectType} onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}>
               <option value="" disabled>Project Type</option>
               <option value="Campaign">Campaign</option>
               <option value="Brand Identity">Brand Identity</option>
               <option value="Content">Content</option>
               <option value="Other">Other</option>
             </select>
-
-            <select
-              required
-              className={selectClasses}
-              value={formData.budget}
-              onChange={(e) => setFormData({ ...formData, budget: e.target.value })}
-            >
+            <select required className={selectClasses} value={formData.budget} onChange={(e) => setFormData({ ...formData, budget: e.target.value })}>
               <option value="" disabled>Budget Range</option>
               <option value="Under £500">Under £500</option>
               <option value="£500-£2k">£500–£2k</option>
@@ -90,21 +101,13 @@ const ContactSection = () => {
               <option value="Let's discuss">Let's discuss</option>
             </select>
           </div>
-
-          <textarea
-            placeholder="Tell us about your project"
-            rows={5}
-            required
-            className={`${inputClasses} resize-none`}
-            value={formData.message}
-            onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-          />
-
+          <textarea placeholder="Tell us about your project" rows={5} required className={`${inputClasses} resize-none`} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
           <button
             type="submit"
-            className="bg-primary text-primary-foreground px-10 py-4 text-sm tracking-widest font-medium hover:bg-primary/90 transition-colors"
+            disabled={isSubmitting}
+            className="bg-primary text-primary-foreground px-10 py-4 text-sm tracking-widest font-medium hover:bg-primary/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
           >
-            SEND IT OVER
+            {isSubmitting ? "SENDING..." : "SEND IT OVER"}
           </button>
         </form>
       </div>

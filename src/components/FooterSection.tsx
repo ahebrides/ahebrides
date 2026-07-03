@@ -59,7 +59,7 @@ const FooterSection = () => {
               </a>
               {/* LinkedIn */}
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/laurent-artteeshow/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted-foreground hover:text-foreground transition-colors"
