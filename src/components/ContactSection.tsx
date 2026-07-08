@@ -17,23 +17,25 @@ const ContactSection = () => {
     setIsSubmitting(true);
 
     try {
-      const body = new URLSearchParams({
-        "form-name": "contact",
-        name: formData.name,
-        email: formData.email,
-        company: formData.company,
-        projectType: formData.projectType,
-        budget: formData.budget,
-        message: formData.message,
-      });
-
-      const response = await fetch("/", {
+      const response = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: body.toString(),
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: "1ce79e2e-fbb8-49ce-8ff0-ac6fc43977c2",
+          subject: `New project enquiry from ${formData.name}`,
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          projectType: formData.projectType,
+          budget: formData.budget,
+          message: formData.message,
+          from_name: "A. HEBRIDES Website",
+        }),
       });
 
-      if (response.ok) {
+      const result = await response.json();
+
+      if (result.success) {
         toast.success("Message sent! We'll be in touch soon.");
         setFormData({
           name: "",
@@ -68,17 +70,7 @@ const ContactSection = () => {
           Tell us what you're building. We'll tell you how we can help.
         </p>
 
-        <form
-          name="contact"
-          method="POST"
-          data-netlify="true"
-          data-netlify-honeypot="bot-field"
-          onSubmit={handleSubmit}
-          className="space-y-6"
-        >
-          <input type="hidden" name="form-name" value="contact" />
-          <input type="hidden" name="bot-field" />
-
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <input type="text" placeholder="Name" required className={inputClasses} value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })} />
             <input type="email" placeholder="Email" required className={inputClasses} value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
