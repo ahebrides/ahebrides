@@ -2,9 +2,12 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useFadeIn } from "@/hooks/useFadeIn";
 import FooterSection from "@/components/FooterSection";
-import arttee1 from "@/assets/artteeshow-1.jpeg";
-import arttee2 from "@/assets/artteeshow-2.png";
-import arttee3 from "@/assets/artteeshow-3.png";
+
+import atsHero from "@/assets/ats-hero.jpg";
+import atsOsaka from "@/assets/ats-osaka.png";
+import atsCastle from "@/assets/ats-castle.jpg";
+import atsWhiteTee from "@/assets/ats-white-tee.jpg";
+import atsRain from "@/assets/ats-rain.jpg";
 
 const CaseStudyArtteeshow = () => {
   const containerRef = useFadeIn();
@@ -22,398 +25,256 @@ const CaseStudyArtteeshow = () => {
   };
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-background text-foreground">
-      {/* Back Link */}
+    <div ref={containerRef} className="bg-background">
+
+      {/* Back link */}
       <div className="px-6 md:px-16 pt-8">
         <Link
           to="/"
-          className="text-muted-foreground text-sm hover:text-foreground transition-colors inline-flex items-center gap-2"
+          className="text-muted-foreground text-sm tracking-widest uppercase hover:text-foreground transition-colors"
         >
           ← Back to Home
         </Link>
       </div>
 
-      {/* ─── A. HERO SECTION ─── */}
-      <section className="px-6 md:px-16 pt-16 pb-24 max-w-6xl mx-auto">
+      {/* ── HERO ──────────────────────────────────────────────── */}
+      <section className="px-6 md:px-16 pt-12 pb-0">
         <p className="text-muted-foreground text-xs tracking-[0.3em] uppercase mb-6">
           Case Study 001
         </p>
-        <h1 className="heading-display text-5xl sm:text-7xl md:text-8xl lg:text-9xl text-foreground mb-6">
+        <h1 className="heading-display text-foreground text-5xl md:text-8xl lg:text-9xl leading-none mb-8">
           ARTTEESHOW.
         </h1>
-        <p className="text-muted-foreground text-lg md:text-xl font-light max-w-2xl mb-16">
-          Building a premium AI-native streetwear brand from the edge of the world.
+        <p className="text-foreground/60 font-light text-lg md:text-xl max-w-2xl mb-12 leading-relaxed">
+          Building original worlds through fashion, film and AI. From a remote Scottish island.
         </p>
-        <div className="w-full aspect-[16/9] bg-card border border-border flex items-center justify-center">
-          <span className="text-muted-foreground/50 text-sm">
-            Hero image — awaiting visual
-          </span>
-        </div>
       </section>
 
-      {/* ─── B. THE CHALLENGE ─── */}
-      <div className="fade-in-section">
-        <section className="px-6 md:px-16 py-24 max-w-6xl mx-auto">
-          <h2 className="heading-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-12">
-            THE CHALLENGE.
-          </h2>
-          <div className="grid md:grid-cols-2 gap-16 items-start">
-            <div className="space-y-6">
-              <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
-                Building a premium, credible streetwear brand from scratch. Solo. From
-                a remote Scottish island. No studio, no team, no photography budget.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
-                The entire creative engine? AI.
-              </p>
-              <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed">
-                Not as a gimmick. Not as an experiment. As the sole means of
-                production for a brand that needed to look, feel, and compete like it
-                came out of a well-funded creative studio.
-              </p>
-            </div>
-            <div className="border-l-2 border-accent pl-8 flex items-center">
-              <blockquote className="text-accent text-xl md:text-2xl italic font-light leading-relaxed">
-                "Geography used to be a cage. Now it's the story."
-              </blockquote>
-            </div>
-          </div>
-        </section>
+      {/* Hero image — full bleed */}
+      <div className="w-full">
+        <img
+          src={atsHero}
+          alt="ARTTEESHOW — Heavy Duty campaign"
+          className="w-full aspect-[16/9] object-cover object-center"
+        />
       </div>
 
-      {/* ─── C. THE APPROACH ─── */}
+      {/* ── THE BRAND ─────────────────────────────────────────── */}
       <div className="fade-in-section">
-        <section className="px-6 md:px-16 py-24 max-w-6xl mx-auto">
-          <h2 className="heading-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-8">
-            THE APPROACH.
-          </h2>
-          <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed max-w-3xl mb-6">
-            This wasn't about generating images. It was about building a complete,
-            cohesive, premium brand world with AI — consistent visual identity,
-            campaigns, product visuals, and content, all held together by disciplined
-            creative direction.
-          </p>
-          <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed max-w-3xl mb-20">
-            The skill isn't in the tools. It's in the eye. The taste. The creative
-            direction that ensures every output serves the brand, not the technology.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Principle 1 */}
-            <div className="space-y-4">
-              <span className="heading-display text-5xl md:text-6xl text-accent">01</span>
-              <h3 className="heading-display text-lg text-foreground">
-                CREATIVE DIRECTION FIRST
-              </h3>
-              <p className="text-muted-foreground text-sm font-light leading-relaxed">
-                AI is the instrument. The vision, taste, and brand discipline come
-                from years of experience.
+        <section className="px-6 md:px-16 py-24 md:py-32">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
+            <div>
+              <h2 className="heading-display text-foreground text-3xl md:text-5xl mb-8">
+                THE BRAND.
+              </h2>
+              <p className="text-foreground/70 font-light text-lg leading-relaxed mb-6">
+                ARTTEESHOW isn't a t-shirt shop.
+              </p>
+              <p className="text-foreground/70 font-light leading-relaxed mb-6">
+                It's a story-first creative studio — one that happens to make clothing people can wear. Every collection begins with a question. Every design belongs to a world. Every campaign reveals another layer of that world.
+              </p>
+              <p className="text-foreground/70 font-light leading-relaxed">
+                Built entirely solo, from the Outer Hebrides, using AI as the production engine — ARTTEESHOW proves that the quality of the output has nothing to do with the size of the team or the budget behind it.
               </p>
             </div>
-
-            {/* Principle 2 */}
-            <div className="space-y-4">
-              <span className="heading-display text-5xl md:text-6xl text-accent">02</span>
-              <h3 className="heading-display text-lg text-foreground">
-                CONSISTENCY OVER NOVELTY
-              </h3>
-              <p className="text-muted-foreground text-sm font-light leading-relaxed">
-                Every visual, every campaign, every product shot exists within a
-                coherent brand world.
-              </p>
-            </div>
-
-            {/* Principle 3 */}
-            <div className="space-y-4">
-              <span className="heading-display text-5xl md:text-6xl text-accent">03</span>
-              <h3 className="heading-display text-lg text-foreground">
-                OUTPUT THAT COMPETES
-              </h3>
-              <p className="text-muted-foreground text-sm font-light leading-relaxed">
-                The benchmark isn't "good for AI." It's "good enough to sit next to
-                any traditional studio's work."
+            <div className="border-l border-border pl-12">
+              <p className="text-accent text-2xl md:text-3xl font-light italic leading-relaxed">
+                "AI is the production method.<br />Storytelling is the product."
               </p>
             </div>
           </div>
         </section>
       </div>
 
-      {/* ─── D. THE WORK ─── */}
+      {/* ── CREATIVE MANIFESTO ────────────────────────────────── */}
       <div className="fade-in-section">
-        <section className="px-6 md:px-16 py-24 max-w-6xl mx-auto">
-          <h2 className="heading-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-16">
-            THE WORK.
-          </h2>
-
-          <div className="space-y-4">
-            {/* Image 1: full-width */}
-            <div className="w-full aspect-[16/9] overflow-hidden">
+        <section className="bg-secondary px-6 md:px-16 py-24 md:py-32">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div>
+              <h2 className="heading-display text-foreground text-3xl md:text-5xl mb-12">
+                CREATIVE<br />MANIFESTO.
+              </h2>
+              <div className="space-y-5 text-foreground/70 font-light leading-relaxed">
+                <p>ARTTEESHOW doesn't start with products. It starts with people.</p>
+                <p>Every collection begins with a question.<br />Every design belongs to a world.<br />Every film reveals another part of that world.</p>
+                <div className="border-l-2 border-accent pl-6 my-8 space-y-3">
+                  <p>We believe ordinary people carry extraordinary weight.</p>
+                  <p>We believe the smallest gestures often tell the biggest stories.</p>
+                  <p>We believe clothing can become a symbol long before it becomes a product.</p>
+                </div>
+                <p className="text-foreground font-medium text-lg">
+                  We don't make advertisements.<br />We make stories people can wear.
+                </p>
+              </div>
+            </div>
+            {/* Rain alley — cinematic, perfectly matches the manifesto's mood */}
+            <div>
               <img
-                src={arttee1}
-                alt="ARTTEESHOW campaign visual"
-                className="w-full h-full object-cover"
+                src={atsRain}
+                alt="ARTTEESHOW — stories people can wear"
+                className="w-full aspect-[3/4] object-cover"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ── THE WORK ──────────────────────────────────────────── */}
+      <div className="fade-in-section">
+        <section className="px-6 md:px-16 py-24 md:py-32">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="heading-display text-foreground text-3xl md:text-5xl mb-4">
+              THE WORK.
+            </h2>
+            <p className="text-muted-foreground font-light mb-16 max-w-xl">
+              Across collections, aesthetics and moods — a consistent world built with disciplined creative direction.
+            </p>
+
+            {/* OSAKA SIX — full width editorial */}
+            <div className="mb-4">
+              <img
+                src={atsOsaka}
+                alt="ARTTEESHOW — Osaka Six: 006 Remains campaign"
+                className="w-full aspect-[3/4] md:aspect-[16/9] object-cover object-top"
               />
             </div>
 
-            {/* Images 2 & 3: side by side */}
-            <div className="grid grid-cols-2 gap-4">
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={arttee2}
-                  alt="ARTTEESHOW product visual"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              <div className="aspect-[3/4] overflow-hidden">
-                <img
-                  src={arttee3}
-                  alt="ARTTEESHOW brand visual"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-
-            {/* Placeholder 1: full-width */}
-            <div
-              className="w-full aspect-[16/9] bg-card border border-border flex items-center justify-center"
-              data-placeholder="true"
-            >
-              <span className="text-muted-foreground/30 text-sm">
-                Visual — awaiting asset
-              </span>
-            </div>
-
-            {/* Placeholders 2 & 3: side by side */}
-            <div className="grid grid-cols-2 gap-4">
-              <div
-                className="aspect-[3/4] bg-card border border-border flex items-center justify-center"
-                data-placeholder="true"
-              >
-                <span className="text-muted-foreground/30 text-sm">
-                  Visual — awaiting asset
-                </span>
-              </div>
-              <div
-                className="aspect-[3/4] bg-card border border-border flex items-center justify-center"
-                data-placeholder="true"
-              >
-                <span className="text-muted-foreground/30 text-sm">
-                  Visual — awaiting asset
-                </span>
-              </div>
-            </div>
-
-            {/* Placeholder 4: full-width */}
-            <div
-              className="w-full aspect-[16/9] bg-card border border-border flex items-center justify-center"
-              data-placeholder="true"
-            >
-              <span className="text-muted-foreground/30 text-sm">
-                Visual — awaiting asset
-              </span>
+            {/* Castle + White tee — side by side portrait */}
+            <div className="grid grid-cols-2 gap-4 mb-4">
+              <img
+                src={atsCastle}
+                alt="ARTTEESHOW — campaign shoot, Scotland"
+                className="w-full aspect-[3/4] object-cover"
+              />
+              <img
+                src={atsWhiteTee}
+                alt="ARTTEESHOW — brand identity"
+                className="w-full aspect-[3/4] object-cover"
+              />
             </div>
           </div>
         </section>
       </div>
 
-      {/* ─── E. THE PROOF ─── */}
+      {/* ── BEYOND CLOTHING ───────────────────────────────────── */}
       <div className="fade-in-section">
-        <section className="px-6 md:px-16 py-24 max-w-6xl mx-auto">
-          <h2 className="heading-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-16">
-            THE PROOF.
-          </h2>
-
-          <div className="grid md:grid-cols-3 gap-6">
-            {/* Card 1 */}
-            <div className="bg-card border border-border p-8 space-y-4">
-              <div className="w-10 h-10 border border-accent flex items-center justify-center mb-2">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-accent"
-                >
-                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-                </svg>
-              </div>
-              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                Industry Recognition
-              </p>
-              <p className="text-foreground text-sm font-light leading-relaxed">
-                Featured on leading fashion-tech and streetwear industry platforms.
-              </p>
-            </div>
-
-            {/* Card 2 */}
-            <div className="bg-card border border-border p-8 space-y-4">
-              <div className="w-10 h-10 border border-accent flex items-center justify-center mb-2">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-accent"
-                >
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-                  <circle cx="9" cy="7" r="4" />
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-                  <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                </svg>
-              </div>
-              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                Partner Validation
-              </p>
-              <p className="text-foreground text-sm font-light leading-relaxed">
-                Campaign visuals reshared and endorsed by manufacturing and
-                supply-chain partners.
-              </p>
-            </div>
-
-            {/* Card 3 */}
-            <div className="bg-card border border-border p-8 space-y-4">
-              <div className="w-10 h-10 border border-accent flex items-center justify-center mb-2">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  className="text-accent"
-                >
-                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                  <polyline points="22 4 12 14.01 9 11.01" />
-                </svg>
-              </div>
-              <p className="text-xs tracking-[0.2em] uppercase text-muted-foreground">
-                Brand Credibility
-              </p>
-              <p className="text-foreground text-sm font-light leading-relaxed">
-                A complete brand world — identity, e-commerce, campaigns, social —
-                perceived as a traditional studio production.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      {/* ─── F. CLIENT TAKEAWAY ─── */}
-      <div className="fade-in-section">
-        <section className="bg-secondary w-full px-6 md:px-16 py-24">
+        <section className="bg-secondary px-6 md:px-16 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
-            <h2 className="heading-display text-3xl sm:text-4xl md:text-5xl text-foreground mb-8">
-              WHAT THIS MEANS FOR YOU.
+            <h2 className="heading-display text-foreground text-3xl md:text-5xl mb-12">
+              BEYOND<br />CLOTHING.
             </h2>
-            <p className="text-muted-foreground text-base md:text-lg font-light leading-relaxed max-w-3xl mb-12">
-              If we can build and run a complete premium brand world — solo, from a
-              Scottish island, with AI — imagine what we can build for you.
-            </p>
-            <ul className="space-y-6 max-w-3xl">
-              <li className="flex items-start gap-4">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="text-accent mt-0.5 flex-shrink-0"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span className="text-foreground text-base font-light">
-                  Brand identity that looks and feels premium — built in days, not
-                  months.
-                </span>
-              </li>
-              <li className="flex items-start gap-4">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="text-accent mt-0.5 flex-shrink-0"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span className="text-foreground text-base font-light">
-                  Campaign visuals at editorial quality — at a fraction of the
-                  traditional cost.
-                </span>
-              </li>
-              <li className="flex items-start gap-4">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="text-accent mt-0.5 flex-shrink-0"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span className="text-foreground text-base font-light">
-                  A cohesive visual world across every touchpoint — website, social,
-                  print.
-                </span>
-              </li>
-              <li className="flex items-start gap-4">
-                <svg
-                  width="20"
-                  height="20"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  className="text-accent mt-0.5 flex-shrink-0"
-                >
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span className="text-foreground text-base font-light">
-                  A creative partner who understands both the craft and the
-                  technology.
-                </span>
-              </li>
-            </ul>
+            <div className="grid md:grid-cols-2 gap-16">
+              <div>
+                <p className="text-foreground/70 font-light leading-relaxed mb-6">
+                  ARTTEESHOW is evolving into a story-first creative studio.
+                </p>
+                <p className="text-foreground/70 font-light leading-relaxed mb-6">
+                  Artist collaborations remain at the heart of the brand, giving each collection its own visual language and mythology.
+                </p>
+                <p className="text-foreground/70 font-light leading-relaxed">
+                  Alongside those collaborations, original films and series explore the same emotional themes through new characters and new worlds. Each project stands on its own. Together, they form the ARTTEESHOW universe.
+                </p>
+              </div>
+              <div className="grid grid-cols-1 gap-px bg-border">
+                {[
+                  { label: "Artist Collaborations", desc: "Each collection rooted in a creative partnership — giving every drop its own visual identity and mythology." },
+                  { label: "Original Films & Series", desc: "Narrative work that expands the world beyond the clothing — new characters, new stories, same emotional core." },
+                  { label: "The Universe", desc: "Every project is standalone. Every project is also part of something larger." },
+                ].map((item) => (
+                  <div key={item.label} className="bg-secondary p-8">
+                    <p className="text-accent text-xs tracking-widest uppercase mb-3">{item.label}</p>
+                    <p className="text-foreground/70 font-light leading-relaxed text-sm">{item.desc}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
       </div>
 
-      {/* ─── G. CTA SECTION ─── */}
+      {/* ── THE PROOF ─────────────────────────────────────────── */}
       <div className="fade-in-section">
-        <section className="px-6 md:px-16 py-32 max-w-6xl mx-auto text-center">
-          <h2 className="heading-display text-4xl sm:text-5xl md:text-7xl text-foreground mb-6">
-            LET'S BUILD SOMETHING.
+        <section className="px-6 md:px-16 py-24 md:py-32">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="heading-display text-foreground text-3xl md:text-5xl mb-16">
+              THE PROOF.
+            </h2>
+            <div className="grid md:grid-cols-3 gap-px bg-border">
+              {[
+                {
+                  label: "Industry Recognition",
+                  desc: "Featured on leading fashion-tech and streetwear industry platforms — without a PR budget or agency behind it.",
+                },
+                {
+                  label: "Partner Validation",
+                  desc: "Campaign visuals reshared and endorsed by manufacturing and supply-chain partners as benchmark creative.",
+                },
+                {
+                  label: "Brand Credibility",
+                  desc: "A complete brand world — identity, e-commerce, campaigns, social — perceived as traditional studio production.",
+                },
+              ].map((item) => (
+                <div key={item.label} className="bg-background p-8 md:p-12">
+                  <p className="text-accent text-xs tracking-widest uppercase mb-4">{item.label}</p>
+                  <p className="text-foreground/70 font-light leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ── WHAT THIS MEANS FOR YOU ───────────────────────────── */}
+      <div className="fade-in-section">
+        <section className="bg-secondary px-6 md:px-16 py-24 md:py-32">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="heading-display text-foreground text-3xl md:text-5xl mb-8">
+              WHAT THIS<br />MEANS FOR YOU.
+            </h2>
+            <p className="text-foreground/70 font-light text-lg leading-relaxed max-w-2xl mb-16">
+              If we can build and run a complete premium brand world — solo, from a Scottish island — imagine what we can build for you, with a real brief and a real budget.
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                "Brand identity that looks and feels premium — built in days, not months.",
+                "Campaign visuals at editorial quality — at a fraction of the traditional cost.",
+                "A cohesive visual world across every touchpoint — website, social, print.",
+                "A creative partner who understands both the craft and the technology.",
+              ].map((benefit) => (
+                <div key={benefit} className="flex gap-4 items-start">
+                  <span className="text-accent mt-1 shrink-0">→</span>
+                  <p className="text-foreground/70 font-light leading-relaxed">{benefit}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* ── CTA ───────────────────────────────────────────────── */}
+      <div className="fade-in-section">
+        <section className="px-6 md:px-16 py-24 md:py-32 text-center">
+          <h2 className="heading-display text-foreground text-4xl md:text-7xl mb-6">
+            LET'S BUILD<br />SOMETHING.
           </h2>
-          <p className="text-muted-foreground text-base md:text-lg font-light mb-12 max-w-2xl mx-auto">
-            Ready to see what AI-powered creative direction can do for your brand?
+          <p className="text-muted-foreground font-light mb-12 max-w-xl mx-auto">
+            Ready to see what story-first creative direction can do for your brand?
           </p>
           <button
             onClick={handleCTA}
-            className="bg-foreground text-background heading-display text-sm tracking-[0.15em] px-10 py-4 hover:bg-accent hover:text-background transition-colors duration-300 mb-8"
+            className="bg-primary text-primary-foreground px-12 py-5 text-sm tracking-widest font-medium hover:bg-primary/90 transition-colors mb-8 block mx-auto"
           >
             START A PROJECT
           </button>
-          <div>
-            <a
-              href="mailto:laurent@ahebrides.co.uk"
-              className="text-muted-foreground text-sm hover:text-accent transition-colors"
-            >
-              laurent@ahebrides.co.uk
-            </a>
-          </div>
+          <a
+            href="mailto:laurent@ahebrides.co.uk"
+            className="text-muted-foreground text-sm hover:text-foreground transition-colors"
+          >
+            laurent@ahebrides.co.uk
+          </a>
         </section>
       </div>
 
-      {/* ─── H. FOOTER ─── */}
       <FooterSection />
     </div>
   );
