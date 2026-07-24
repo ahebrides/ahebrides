@@ -4,7 +4,7 @@ import { useFadeIn } from "@/hooks/useFadeIn";
 import FooterSection from "@/components/FooterSection";
 
 import atsHero from "@/assets/ats-hero.jpg";
-import atsOsaka from "@/assets/ats-osaka.png";
+import atsHeavyDuty from "@/assets/ats-heavyduty.jpg";
 import atsCastle from "@/assets/ats-castle.jpg";
 import atsWhiteTee from "@/assets/ats-white-tee.jpg";
 import atsRain from "@/assets/ats-rain.jpg";
@@ -37,7 +37,7 @@ const CaseStudyArtteeshow = () => {
         </Link>
       </div>
 
-      {/* ── HERO ──────────────────────────────────────────────── */}
+      {/* HERO */}
       <section className="px-6 md:px-16 pt-12 pb-0">
         <p className="text-muted-foreground text-xs tracking-[0.3em] uppercase mb-6">
           Case Study 001
@@ -50,16 +50,16 @@ const CaseStudyArtteeshow = () => {
         </p>
       </section>
 
-      {/* Hero image — full bleed */}
+      {/* Hero image, full bleed */}
       <div className="w-full">
         <img
           src={atsHero}
-          alt="ARTTEESHOW — Heavy Duty campaign"
+          alt="ARTTEESHOW Heavy Duty campaign"
           className="w-full aspect-[16/9] object-cover object-center"
         />
       </div>
 
-      {/* ── THE BRAND ─────────────────────────────────────────── */}
+      {/* THE BRAND */}
       <div className="fade-in-section">
         <section className="px-6 md:px-16 py-24 md:py-32">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-start">
@@ -71,10 +71,10 @@ const CaseStudyArtteeshow = () => {
                 ARTTEESHOW isn't a t-shirt shop.
               </p>
               <p className="text-foreground/70 font-light leading-relaxed mb-6">
-                It's a story-first creative studio — one that happens to make clothing people can wear. Every collection begins with a question. Every design belongs to a world. Every campaign reveals another layer of that world.
+                It's a story-first creative studio. One that happens to make clothing people can wear. Every collection begins with a question. Every design belongs to a world. Every campaign reveals another layer of that world.
               </p>
               <p className="text-foreground/70 font-light leading-relaxed">
-                Built entirely solo, from the Outer Hebrides, using AI as the production engine — ARTTEESHOW proves that the quality of the output has nothing to do with the size of the team or the budget behind it.
+                Built entirely solo, from the Outer Hebrides, using AI as the production engine. ARTTEESHOW proves that the quality of the output has nothing to do with the size of the team or the budget behind it.
               </p>
             </div>
             <div className="border-l border-border pl-12">
@@ -86,7 +86,7 @@ const CaseStudyArtteeshow = () => {
         </section>
       </div>
 
-      {/* ── CREATIVE MANIFESTO ────────────────────────────────── */}
+      {/* CREATIVE MANIFESTO */}
       <div className="fade-in-section">
         <section className="bg-secondary px-6 md:px-16 py-24 md:py-32">
           <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
@@ -107,11 +107,11 @@ const CaseStudyArtteeshow = () => {
                 </p>
               </div>
             </div>
-            {/* Rain alley — cinematic, perfectly matches the manifesto's mood */}
+            {/* Rain alley, cinematic */}
             <div>
               <img
                 src={atsRain}
-                alt="ARTTEESHOW — stories people can wear"
+                alt="ARTTEESHOW stories people can wear"
                 className="w-full aspect-[3/4] object-cover"
               />
             </div>
@@ -119,7 +119,7 @@ const CaseStudyArtteeshow = () => {
         </section>
       </div>
 
-      {/* ── THE WORK ──────────────────────────────────────────── */}
+      {/* THE WORK */}
       <div className="fade-in-section">
         <section className="px-6 md:px-16 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
@@ -127,28 +127,28 @@ const CaseStudyArtteeshow = () => {
               THE WORK.
             </h2>
             <p className="text-muted-foreground font-light mb-16 max-w-xl">
-              Across collections, aesthetics and moods — a consistent world built with disciplined creative direction.
+              Across collections, aesthetics and moods. A consistent world built with disciplined creative direction.
             </p>
 
-            {/* OSAKA SIX — full width editorial */}
+            {/* Full width 16:9 */}
             <div className="mb-4">
               <img
-                src={atsOsaka}
-                alt="ARTTEESHOW — Osaka Six: 006 Remains campaign"
-                className="w-full aspect-[3/4] md:aspect-[16/9] object-cover object-top"
+                src={atsHeavyDuty}
+                alt="ARTTEESHOW Heavy Duty campaign"
+                className="w-full aspect-[16/9] object-cover object-center"
               />
             </div>
 
-            {/* Castle + White tee — side by side portrait */}
+            {/* Castle + White tee, side by side portrait */}
             <div className="grid grid-cols-2 gap-4 mb-4">
               <img
                 src={atsCastle}
-                alt="ARTTEESHOW — campaign shoot, Scotland"
+                alt="ARTTEESHOW campaign shoot in Scotland"
                 className="w-full aspect-[3/4] object-cover"
               />
               <img
                 src={atsWhiteTee}
-                alt="ARTTEESHOW — brand identity"
+                alt="ARTTEESHOW brand identity"
                 className="w-full aspect-[3/4] object-cover"
               />
             </div>
@@ -156,7 +156,7 @@ const CaseStudyArtteeshow = () => {
         </section>
       </div>
 
-      {/* ── BEYOND CLOTHING ───────────────────────────────────── */}
+      {/* BEYOND CLOTHING */}
       <div className="fade-in-section">
         <section className="bg-secondary px-6 md:px-16 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
@@ -177,8 +177,8 @@ const CaseStudyArtteeshow = () => {
               </div>
               <div className="grid grid-cols-1 gap-px bg-border">
                 {[
-                  { label: "Artist Collaborations", desc: "Each collection rooted in a creative partnership — giving every drop its own visual identity and mythology." },
-                  { label: "Original Films & Series", desc: "Narrative work that expands the world beyond the clothing — new characters, new stories, same emotional core." },
+                  { label: "Artist Collaborations", desc: "Each collection rooted in a creative partnership. Every drop carries its own visual identity and mythology." },
+                  { label: "Original Films & Series", desc: "Narrative work that expands the world beyond the clothing. New characters, new stories, same emotional core." },
                   { label: "The Universe", desc: "Every project is standalone. Every project is also part of something larger." },
                 ].map((item) => (
                   <div key={item.label} className="bg-secondary p-8">
@@ -192,7 +192,7 @@ const CaseStudyArtteeshow = () => {
         </section>
       </div>
 
-      {/* ── THE PROOF ─────────────────────────────────────────── */}
+      {/* THE PROOF */}
       <div className="fade-in-section">
         <section className="px-6 md:px-16 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
@@ -203,7 +203,7 @@ const CaseStudyArtteeshow = () => {
               {[
                 {
                   label: "Industry Recognition",
-                  desc: "Featured on leading fashion-tech and streetwear industry platforms — without a PR budget or agency behind it.",
+                  desc: "Featured on leading fashion-tech and streetwear industry platforms. No PR budget. No agency.",
                 },
                 {
                   label: "Partner Validation",
@@ -211,7 +211,7 @@ const CaseStudyArtteeshow = () => {
                 },
                 {
                   label: "Brand Credibility",
-                  desc: "A complete brand world — identity, e-commerce, campaigns, social — perceived as traditional studio production.",
+                  desc: "A complete brand world across identity, e-commerce, campaigns and social. Perceived as traditional studio production.",
                 },
               ].map((item) => (
                 <div key={item.label} className="bg-background p-8 md:p-12">
@@ -224,7 +224,7 @@ const CaseStudyArtteeshow = () => {
         </section>
       </div>
 
-      {/* ── WHAT THIS MEANS FOR YOU ───────────────────────────── */}
+      {/* WHAT THIS MEANS FOR YOU */}
       <div className="fade-in-section">
         <section className="bg-secondary px-6 md:px-16 py-24 md:py-32">
           <div className="max-w-6xl mx-auto">
@@ -232,13 +232,13 @@ const CaseStudyArtteeshow = () => {
               WHAT THIS<br />MEANS FOR YOU.
             </h2>
             <p className="text-foreground/70 font-light text-lg leading-relaxed max-w-2xl mb-16">
-              If we can build and run a complete premium brand world — solo, from a Scottish island — imagine what we can build for you, with a real brief and a real budget.
+              If we can build and run a complete premium brand world, solo, from a Scottish island, imagine what we can build for you with a real brief and a real budget.
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               {[
-                "Brand identity that looks and feels premium — built in days, not months.",
-                "Campaign visuals at editorial quality — at a fraction of the traditional cost.",
-                "A cohesive visual world across every touchpoint — website, social, print.",
+                "Brand identity that looks and feels premium. Built in days, not months.",
+                "Campaign visuals at editorial quality. At a fraction of the traditional cost.",
+                "A cohesive visual world across every touchpoint. Website, social, print.",
                 "A creative partner who understands both the craft and the technology.",
               ].map((benefit) => (
                 <div key={benefit} className="flex gap-4 items-start">
@@ -251,7 +251,7 @@ const CaseStudyArtteeshow = () => {
         </section>
       </div>
 
-      {/* ── CTA ───────────────────────────────────────────────── */}
+      {/* CTA */}
       <div className="fade-in-section">
         <section className="px-6 md:px-16 py-24 md:py-32 text-center">
           <h2 className="heading-display text-foreground text-4xl md:text-7xl mb-6">

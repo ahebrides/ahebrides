@@ -11,7 +11,7 @@ const StudioSection = () => {
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <img
             src={founderImg}
-            alt="Laurent B. — Creative Director, A. HEBRIDES"
+            alt="Laurent B., Creative Director, A. HEBRIDES"
             className="w-full aspect-square object-cover"
           />
           <div>

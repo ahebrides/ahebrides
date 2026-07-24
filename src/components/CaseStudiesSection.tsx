@@ -23,9 +23,9 @@ const CaseStudiesSection = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <img src={arttee1} alt="ARTTEESHOW campaign — model in store" className="w-full aspect-[3/4] object-cover" />
-            <img src={arttee2} alt="ARTTEESHOW campaign — baroque editorial" className="w-full aspect-[3/4] object-cover" />
-            <img src={arttee3} alt="ARTTEESHOW campaign — flat lay" className="w-full aspect-[3/4] object-cover" />
+            <img src={arttee1} alt="ARTTEESHOW campaign, model in store" className="w-full aspect-[3/4] object-cover" />
+            <img src={arttee2} alt="ARTTEESHOW campaign, baroque editorial" className="w-full aspect-[3/4] object-cover" />
+            <img src={arttee3} alt="ARTTEESHOW campaign, flat lay" className="w-full aspect-[3/4] object-cover" />
           </div>
 
           <a href="/case-study/artteeshow" className="text-accent text-sm tracking-widest uppercase hover:text-accent/80 transition-colors">
