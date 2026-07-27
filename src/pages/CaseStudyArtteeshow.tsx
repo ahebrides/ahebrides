@@ -68,13 +68,13 @@ const CaseStudyArtteeshow = () => {
                 THE BRAND.
               </h2>
               <p className="text-foreground/70 font-light text-lg leading-relaxed mb-6">
-                ARTTEESHOW isn't a t-shirt shop.
+                ARTTEESHOW. isn't a t-shirt shop.
               </p>
               <p className="text-foreground/70 font-light leading-relaxed mb-6">
                 It's a story-first creative studio. One that happens to make clothing people can wear. Every collection begins with a question. Every design belongs to a world. Every campaign reveals another layer of that world.
               </p>
               <p className="text-foreground/70 font-light leading-relaxed">
-                Built entirely solo, from the Outer Hebrides, using AI as the production engine. ARTTEESHOW proves that the quality of the output has nothing to do with the size of the team or the budget behind it.
+                Built entirely solo, from the Outer Hebrides, using AI as the production engine. ARTTEESHOW. proves that the quality of the output has nothing to do with the size of the team or the budget behind it.
               </p>
             </div>
             <div className="border-l border-border pl-12">
@@ -95,7 +95,7 @@ const CaseStudyArtteeshow = () => {
                 CREATIVE<br />MANIFESTO.
               </h2>
               <div className="space-y-5 text-foreground/70 font-light leading-relaxed">
-                <p>ARTTEESHOW doesn't start with products. It starts with people.</p>
+                <p>ARTTEESHOW. doesn't start with products. It starts with people.</p>
                 <p>Every collection begins with a question.<br />Every design belongs to a world.<br />Every film reveals another part of that world.</p>
                 <div className="border-l-2 border-accent pl-6 my-8 space-y-3">
                   <p>We believe ordinary people carry extraordinary weight.</p>
@@ -111,8 +111,9 @@ const CaseStudyArtteeshow = () => {
             <div>
               <img
                 src={atsRain}
-                alt="ARTTEESHOW stories people can wear"
+                alt="ARTTEESHOW. stories people can wear"
                 className="w-full aspect-[3/4] object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -134,8 +135,9 @@ const CaseStudyArtteeshow = () => {
             <div className="mb-4">
               <img
                 src={atsHeavyDuty}
-                alt="ARTTEESHOW Heavy Duty campaign"
+                alt="ARTTEESHOW. Heavy Duty campaign"
                 className="w-full aspect-[16/9] object-cover object-center"
+                loading="lazy"
               />
             </div>
 
@@ -143,13 +145,15 @@ const CaseStudyArtteeshow = () => {
             <div className="grid grid-cols-2 gap-4 mb-4">
               <img
                 src={atsCastle}
-                alt="ARTTEESHOW campaign shoot in Scotland"
+                alt="ARTTEESHOW. campaign shoot in Scotland"
                 className="w-full aspect-[3/4] object-cover"
+                loading="lazy"
               />
               <img
                 src={atsWhiteTee}
-                alt="ARTTEESHOW brand identity"
+                alt="ARTTEESHOW. brand identity"
                 className="w-full aspect-[3/4] object-cover"
+                loading="lazy"
               />
             </div>
           </div>
@@ -166,13 +170,13 @@ const CaseStudyArtteeshow = () => {
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <p className="text-foreground/70 font-light leading-relaxed mb-6">
-                  ARTTEESHOW is evolving into a story-first creative studio.
+                  ARTTEESHOW. is evolving into a story-first creative studio.
                 </p>
                 <p className="text-foreground/70 font-light leading-relaxed mb-6">
                   Artist collaborations remain at the heart of the brand, giving each collection its own visual language and mythology.
                 </p>
                 <p className="text-foreground/70 font-light leading-relaxed">
-                  Alongside those collaborations, original films and series explore the same emotional themes through new characters and new worlds. Each project stands on its own. Together, they form the ARTTEESHOW universe.
+                  Alongside those collaborations, original films and series explore the same emotional themes through new characters and new worlds. Each project stands on its own. Together, they form the ARTTEESHOW. universe.
                 </p>
               </div>
               <div className="grid grid-cols-1 gap-px bg-border">
