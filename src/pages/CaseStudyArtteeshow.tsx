@@ -4,10 +4,12 @@ import { useFadeIn } from "@/hooks/useFadeIn";
 import FooterSection from "@/components/FooterSection";
 
 import atsHero from "@/assets/ats-hero.jpg";
-import atsHeavyDuty from "@/assets/ats-heavyduty.jpg";
+import atsRack from "@/assets/ats-rack.jpg";
 import atsCastle from "@/assets/ats-castle.jpg";
 import atsWhiteTee from "@/assets/ats-white-tee.jpg";
 import atsRain from "@/assets/ats-rain.jpg";
+import atsPack1 from "@/assets/ats-pack-1.jpg";
+import atsPack2 from "@/assets/ats-pack-2.jpg";
 
 const CaseStudyArtteeshow = () => {
   const containerRef = useFadeIn();
@@ -131,11 +133,11 @@ const CaseStudyArtteeshow = () => {
               Across collections, aesthetics and moods. A consistent world built with disciplined creative direction.
             </p>
 
-            {/* Full width 16:9 */}
+            {/* Tees on rack, full width 16:9 */}
             <div className="mb-4">
               <img
-                src={atsHeavyDuty}
-                alt="ARTTEESHOW. Heavy Duty campaign"
+                src={atsRack}
+                alt="ARTTEESHOW. full collection on rack"
                 className="w-full aspect-[16/9] object-cover object-center"
                 loading="lazy"
               />
@@ -152,6 +154,37 @@ const CaseStudyArtteeshow = () => {
               <img
                 src={atsWhiteTee}
                 alt="ARTTEESHOW. brand identity"
+                className="w-full aspect-[3/4] object-cover"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+
+      {/* THE EXPERIENCE */}
+      <div className="fade-in-section">
+        <section className="px-6 md:px-16 pb-24 md:pb-32">
+          <div className="max-w-6xl mx-auto">
+            <p className="text-muted-foreground text-xs tracking-[0.3em] uppercase mb-4">
+              Packaging
+            </p>
+            <h2 className="heading-display text-foreground text-3xl md:text-5xl mb-4">
+              THE EXPERIENCE.
+            </h2>
+            <p className="text-muted-foreground font-light mb-12 max-w-xl">
+              Every order arrives as an object worth keeping. Custom label, hang tag, frosted bag. The unboxing is part of the story.
+            </p>
+            <div className="grid grid-cols-2 gap-4">
+              <img
+                src={atsPack1}
+                alt="ARTTEESHOW. packaging with hang tag"
+                className="w-full aspect-[3/4] object-cover"
+                loading="lazy"
+              />
+              <img
+                src={atsPack2}
+                alt="ARTTEESHOW. full packaging flat lay with custom card"
                 className="w-full aspect-[3/4] object-cover"
                 loading="lazy"
               />
