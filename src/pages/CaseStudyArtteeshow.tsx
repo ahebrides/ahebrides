@@ -30,12 +30,18 @@ const CaseStudyArtteeshow = () => {
     <div ref={containerRef} className="bg-background">
 
       {/* Back link */}
-      <div className="px-6 md:px-16 pt-8">
+      <div className="px-6 md:px-16 pt-8 pb-4 flex flex-wrap justify-between items-center gap-4 border-b border-border/40">
         <Link
           to="/"
-          className="text-muted-foreground text-sm tracking-widest uppercase hover:text-foreground transition-colors"
+          className="text-muted-foreground text-xs tracking-[0.25em] uppercase hover:text-foreground transition-colors"
         >
           ← Back to Home
+        </Link>
+        <Link
+          to="/case-study/de-tha-dol"
+          className="text-muted-foreground text-xs tracking-[0.25em] uppercase hover:text-foreground transition-colors"
+        >
+          Case Study 002: DÈ THA DOL? →
         </Link>
       </div>
 
